@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: geolearn_app
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: geolearn
+      DB_USER: geolearn_user
+      DB_PASS: geolearn_pass
+
+  db:
+    image: postgres:16
+    container_name: geolearn_db
+    restart: always
+    environment:
+      POSTGRES_DB: geolearn
+      POSTGRES_USER: geolearn_user
+      POSTGRES_PASSWORD: geolearn_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  postgres_data:

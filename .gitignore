@@ -1,0 +1,16 @@
+# Variables de entorno
+.env
+
+# Logs
+*.log
+
+# Dependencias y caché
+vendor/
+.cache/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Docker volúmenes locales
+postgres_data/
