@@ -298,6 +298,41 @@ table tr:hover td {
     background-color: #f5f8fc;
 }
 
+.badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-historia {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.badge-geografia {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-mixto {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.badge-publicado {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.badge-borrador {
+    background-color: #f5f5f5;
+    color: #757575;
+}
+
 /* ================================================
    Responsive
    ================================================ */
@@ -315,3 +350,4 @@ table tr:hover td {
         padding: 12px 16px;
     }
 }
+
