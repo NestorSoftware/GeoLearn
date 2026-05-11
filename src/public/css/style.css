@@ -332,6 +332,173 @@ table tr:hover td {
     background-color: #f5f5f5;
     color: #757575;
 }
+/* ================================================
+   Juego (trivial)
+   ================================================ */
+
+.pregunta-texto {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.opciones-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.opcion-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--color-white);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius);
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.95rem;
+    transition: border-color 0.15s, background 0.15s;
+    width: 100%;
+}
+
+.opcion-btn:hover {
+    border-color: var(--color-primary);
+    background: #f0f6ff;
+}
+
+.opcion-btn.seleccionada {
+    border-color: var(--color-primary);
+    background: #e8f0fb;
+}
+
+.opcion-letra {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.opcion-texto {
+    flex: 1;
+    color: var(--color-text);
+}
+
+/* ================================================
+   Resultado
+   ================================================ */
+
+.resultado-card {
+    background: var(--color-white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 40px;
+    text-align: center;
+}
+
+.resultado-emoji {
+    font-size: 3.5rem;
+    margin-bottom: 16px;
+}
+
+.resultado-titulo {
+    font-size: 1.5rem;
+    color: var(--color-text);
+    margin-bottom: 16px;
+}
+
+.resultado-puntuacion {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.resultado-puntuacion span {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--color-text-light);
+    margin-left: 4px;
+}
+
+.resultado-detalle {
+    color: var(--color-text-light);
+    margin-bottom: 32px;
+}
+
+.resultado-tabla {
+    text-align: left;
+    margin-bottom: 32px;
+}
+
+.resultado-fila {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.resultado-fila.correcta {
+    background: #e8f5e9;
+}
+
+.resultado-fila.incorrecta {
+    background: #fdecea;
+}
+
+.resultado-num {
+    font-weight: 700;
+    color: var(--color-text-light);
+    min-width: 20px;
+}
+
+.resultado-enunciado {
+    flex: 1;
+    color: var(--color-text);
+}
+
+.resultado-icono {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.resultado-fila.correcta .resultado-icono {
+    color: #2e7d32;
+}
+
+.resultado-fila.incorrecta .resultado-icono {
+    color: #c62828;
+}
+
+.resultado-acciones {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* ================================================
+   Responsive juego
+   ================================================ */
+
+@media (max-width: 600px) {
+    .opciones-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ================================================
    Responsive

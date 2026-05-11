@@ -21,20 +21,20 @@
             <h2>Mi panel de aprendizaje</h2>
 
             <!-- Tarjetas de resumen -->
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Cursos disponibles</h3>
-                    <div class="card-value"><?= count($cursos) ?></div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Cursos disponibles</h3>
+                        <div class="card-value"><?= count($cursos) ?></div>
+                    </div>
+                    <div class="card">
+                        <h3>Partidas jugadas</h3>
+                        <div class="card-value"><?= $partidas_jugadas ?></div>
+                    </div>
+                    <div class="card">
+                        <h3>Mejor puntuación</h3>
+                        <div class="card-value"><?= $mejor_puntuacion > 0 ? $mejor_puntuacion . ' pts' : '—' ?></div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Partidas jugadas</h3>
-                    <div class="card-value">0</div>
-                </div>
-                <div class="card">
-                    <h3>Mejor puntuación</h3>
-                    <div class="card-value">—</div>
-                </div>
-            </div>
 
             <!-- Cursos disponibles -->
             <h3 style="font-size:1.2rem; margin-bottom:16px;">Cursos disponibles</h3>
@@ -61,8 +61,8 @@
                             <p style="font-size:0.8rem; color:#999; margin-bottom:16px;">
                                 Profesor: <?= htmlspecialchars($c['nombre_profesor'] ?? 'Desconocido') ?>
                             </p>
-                            <a href="#" class="btn btn-primary" style="width:auto; padding:8px 20px; font-size:0.85rem;">
-                                Jugar
+                            <a href="/game/jugar?curso_id=<?= $c['id'] ?>" class="btn btn-primary" style="width:auto; padding:8px 20px; font-size:0.85rem;">
+                                    Jugar
                             </a>
                         </div>
                     <?php endforeach; ?>
